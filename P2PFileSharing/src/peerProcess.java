@@ -16,7 +16,7 @@ public class peerProcess extends Thread {
     public static void main(String[] args) {
         try {
 //            thisPeerId = Integer.parseInt(args[0]);
-            thisPeerId = 1001;
+            thisPeerId = 1002;
             System.out.println("This peer - " + thisPeerId);
             peers = new LinkedHashMap<>();
 
