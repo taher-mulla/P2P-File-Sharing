@@ -81,7 +81,7 @@ public class peerProcess extends Thread {
     static void setPeerInfo(HashMap<Integer, PeerInfo> peers) {
         try {
             BufferedReader peerInfo =
-                    new BufferedReader(new FileReader("Config Files/PeerInfo.cfg"));
+                    new BufferedReader(new FileReader("ConfigFiles/PeerInfo.cfg"));
             Object[] peerInfoLines = peerInfo.lines().toArray();
             for (var peerInfoLine : peerInfoLines) {
                 int peerId = Integer.parseInt(peerInfoLine.toString().split(" ")[0]);
@@ -255,7 +255,7 @@ class CommonProperties {
     public void setCommonProperties() {
         try {
             BufferedReader commonInfo =
-                    new BufferedReader(new FileReader("Config Files/Common.cfg"));
+                    new BufferedReader(new FileReader("ConfigFiles/Common.cfg"));
 
             Object[] commonLines = commonInfo.lines().toArray();
             this.setPreferredNeighbors(Integer.parseInt(commonLines[0].toString().split(" ")[1]));
