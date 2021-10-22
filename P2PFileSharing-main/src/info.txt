@@ -1,0 +1,14 @@
+    private static int peersWithCompleteFile = 0; // To keep a count of peers with complete file
+    private static int thisPeerId; // current peer id
+    private static PeerInfo thisPeer; // current peer
+    private static LinkedHashMap<Integer, PeerInfo> peers;
+    private static ConcurrentHashMap<Integer, Socket> peerSockets;
+    private static int connectedPeers = 0;
+    private static final char CHOKE = '0';
+    private static final char UNCHOKE = '1';
+    private static final char INTERESTED = '2';
+    private static final char NOTINTERESTED = '3';
+    private static final char HAVE = '4';
+    private static final char BITFIELD = '5';
+    private static final char REQUEST = '6';
+    private static final char PIECE = '7';
